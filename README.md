@@ -6,8 +6,10 @@ Set up with a web server and some cool actions.
 Alternatives might work but some modifications might be required. The wireless variant of the pico is not required but the web server and wifi features will not work and should be removed.
 <br>
 This project has been built using the Pico W and the Pimoroni RGB keypad base. Using CircuitPython version 8.1.0.
+<br><br>
+It also makes use of the uk versions of the keypad layout and has its own key map for sending keystrokes over for now. 
 
- <h3>Hardware</h3>
+<h3>Hardware</h3>
 <ul>  
   <li>Raspberry Pi Pico W</li>
   <li><a href="https://shop.pimoroni.com/products/pico-rgb-keypad-base">Pico RGB Keypad Base (Pimoroni)</a></li> 
@@ -22,6 +24,7 @@ This project has been built using the Pico W and the Pimoroni RGB keypad base. U
   </ul>
   <li><a href="https://github.com/martinohanlon/pico-rgbkeypad">pico-rgbkeypad by martinohanlon</a></li>
 </ul>
+<br>
 
 <h2>Instructions</h2>
 <ol>  
