@@ -32,7 +32,7 @@ It also makes use of the uk versions of the keypad layout and has its own key ma
   <li>Connect headers up</li> 
   <li>Put CircuitPython onto the pico by dragging the .uf2 file over</li> 
   <li>Put libraries into the /lib folder</li> 
-  <li>Put boot.py and main.py onto the root folder</li> 
+  <li>Put boot.py, main.py and web folder onto the root folder</li> 
 </ol>
 
 <h2>Info</h2>
