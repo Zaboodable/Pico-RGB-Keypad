@@ -11,10 +11,12 @@ import storage
 from adafruit_hid.keyboard import Keyboard
 from keyboard_layout_win_uk import KeyboardLayout
 from keycode_win_uk import Keycode
-from adafruit_httpserver import Server, Request, Response, FileResponse, JSONResponse, GET, POST
+from adafruit_httpserver import Server, Request, Response, FileResponse, JSONResponse, GET, POST, PUT, DELETE
 
 pad = RGBKeypad()
 pad.brightness = 1
+
+
 
 kbd = Keyboard(usb_hid.devices)
 
@@ -129,6 +131,12 @@ class Button():
         if (self.on_hold_callback is not None):     
             self.on_hold_callback()
     
+    # Remote events
+    def on_press_remote(self):
+        if (self.on_press_callback is not None):
+            self.on_press_callback()
+
+
         
 grid = ButtonGrid(16)
 ssid = "RGBWifi"
@@ -161,8 +169,7 @@ def run_server():
             
             button_number = uploaded_object.get('button', None)
             if button_number is not None:
-                grid.buttons[button_number].on_press()
-                print(f"Button {button_number} clicked")                
+                grid.buttons[button_number].on_press_remote()   
                 return JSONResponse(request, {"message": f'Button {button_number} clicked'}
             )
             
@@ -175,7 +182,6 @@ def run_server():
         return JSONResponse(request, {"message": "Bad message"})
     server_ip = ipaddress.IPv4Address("192.168.69.1")
     server.start(str(server_ip))
-
 
 def setup():
     if (wifi.radio.ap_active == False):
