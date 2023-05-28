@@ -29,7 +29,7 @@ It also makes use of the uk versions of the keypad layout and has its own key ma
 <h2>Instructions</h2>
 <ol>  
   <li>Get the required hardware</li>
-  <li>Connect headers up</li> 
+  <li>Connect headers up (pre soldered headers are nice here)</li> 
   <li>Put CircuitPython onto the pico by dragging the .uf2 file over</li> 
   <li>Put libraries into the /lib folder</li> 
   <li>Put boot.py, main.py and web folder onto the root folder</li> 
