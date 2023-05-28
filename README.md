@@ -37,5 +37,7 @@ It also makes use of the uk versions of the keypad layout and has its own key ma
 
 <h2>Info</h2>
 By default, the pico w should set up a wifi network called "RGBWifi" with password "12345678"
+<br>
+Connect to this with your device and go to http://192.168.69.1/ in a web browser
 <br><br>
 Button 0 has a custom action which sends keystrokes through and displays a message box on screen. This will probably not work on non UK keyboard layouts.
