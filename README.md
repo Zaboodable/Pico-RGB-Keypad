@@ -1,6 +1,6 @@
 # Pico-RGB-Keypad
 RGB Keypad using circuitpython and Raspberry Pi Pico W.
-Set up with a web server and some cool actions.
+Set up with a web server for pressing the buttons wirelessly.
 
 <h2>Requirements</h2>
 Alternatives might work but some modifications might be required. The wireless variant of the pico is not required but the web server and wifi features will not work and should be removed.
@@ -37,3 +37,5 @@ It also makes use of the uk versions of the keypad layout and has its own key ma
 
 <h2>Info</h2>
 By default, the pico w should set up a wifi network called "RGBWifi" with password "12345678"
+<br><br>
+Button 0 has a custom action which sends keystrokes through and displays a message box on screen. This will probably not work on non UK keyboard layouts.
